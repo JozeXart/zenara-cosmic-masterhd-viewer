@@ -1,34 +1,57 @@
-body {
-  margin: 0;
-  height: 100vh;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenara Cosmic — Secure Master HD</title>
 
-.frame {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-img {
-  width: 1024px;
-  max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
-  pointer-events: none;
-  user-select: none;
-}
+  .frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
-.wm {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  color: white;
-  opacity: 0.85;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-}
+  img {
+    width: 1024px;
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .wm {
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    color: white;
+    opacity: 0.85;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<script>
+  document.addEventListener("contextmenu", e => e.preventDefault());
+</script>
+
+</head>
+<body>
+<div class="frame">
+  <img src="https://gateway.pinata.cloud/ipfs/bafybeicvo3k44mvczn467ox4umcczkg5lbgdf2wfhht45stbfgwl3i6pyu" alt="Zenara Cosmic">
+  <div class="wm">Zenara Cosmic — Secure Master HD view only</div>
+</div>
+</body>
+</html>
