@@ -1,58 +1,34 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenara Cosmic — Master HD</title>
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-  .frame {
-    width: 40vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
+img {
+  width: 1024px;
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .wm {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    color: white;
-    opacity: 0.8;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-  }
-</style>
-
-<script>
-  document.addEventListener("contextmenu", event => event.preventDefault());
-</script>
-
-</head>
-
-<body>
-  <div class="frame">
-    <img src="https://gateway.pinata.cloud/ipfs/bafybeicvo3k44mvczn467ox4umcczkg5lbgdf2wfhht45stbfgwl3i6pyu" alt="Zenara Cosmic">
-    <div class="wm">Zenara Cosmic — Secure Master HD view only</div>
-  </div>
-</body>
-</html>
+.wm {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: white;
+  opacity: 0.85;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
