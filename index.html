@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zenara Cosmic — Secure Master HD</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      user-select: none;
-      -webkit-user-drag: none;
-      font-family: system-ui, sans-serif;
-    }
-    .container {
-      position: relative;
-      max-width: 95vw;
-      max-height: 95vh;
-    }
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      pointer-events: none;
-    }
-    .caption {
-      position: absolute;
-      right: 12px;
-      bottom: 10px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.65);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenara Cosmic — Master HD</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frame {
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .wm {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+</script>
+
 </head>
+
 <body>
-  <div class="container">
-    <img id="artwork" alt="Secure HD artwork">
-    <div class="caption">Zenara Cosmic — Secure Master HD view only</div>
+  <div class="frame">
+    <img src="https://gateway.pinata.cloud/ipfs/bafybeicvo3k44mvczn467ox4umcczkg5lbgdf2wfhht45stbfgwl3i6pyu" alt="Zenara Cosmic">
+    <div class="wm">Zenara Cosmic — Secure Master HD view only</div>
   </div>
-
-  <script>
-    const IMAGE_URL = "https://gateway.pinata.cloud/ipfs/bafybeicvo3k44mvczn467ox4umcczkg5lbgdf2wfhht45stbfgwl3i6pyu";
-    document.getElementById("artwork").src = IMAGE_URL;
-
-    window.addEventListener("contextmenu", e => e.preventDefault());
-    window.addEventListener("dragstart", e => e.preventDefault());
-    window.addEventListener("keydown", e => {
-      if ((e.ctrlKey || e.metaKey) && ["s","S","u","U","p","P"].includes(e.key))
-        e.preventDefault();
-    });
-  </script>
 </body>
 </html>
